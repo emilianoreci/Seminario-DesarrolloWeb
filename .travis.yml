@@ -3,3 +3,18 @@ language: php
 
 php:
   -7.2
+  
+addons:
+  -mariadb:"10.4"
+  
+cache:
+  directories:
+  -node-modules
+  -vendor
+ 
+before_script:
+  -composer self-update
+  -composer install --no-interaction
+  
+script:
+  -vendor/bin/phpunit
