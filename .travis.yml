@@ -1,2 +1,3 @@
-language: generic
+dist: precise
+language: php
 
